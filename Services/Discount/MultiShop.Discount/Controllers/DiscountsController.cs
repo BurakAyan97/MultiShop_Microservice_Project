@@ -24,7 +24,7 @@ namespace MultiShop.Discount.Controllers
             return Ok(values);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")]//
         public async Task<IActionResult> GetDiscountCouponById(int id)
         {
             var values = await _discountService.GetByIdDiscountCouponAsync(id);
