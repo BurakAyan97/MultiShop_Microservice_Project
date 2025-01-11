@@ -1,18 +1,14 @@
-﻿using MultiShop.Catalog.Dtos.CategoryDtos;
-using MultiShop.Catalog.Dtos.ProductDetailDtos;
+﻿using MultiShop.Catalog.Dtos.ProductDetailDtos;
 
-namespace MultiShop.Catalog.Services.ProductDetailServices
+namespace MultiShop.Catalog.Services.ProductDetailDetailServices
 {
     public interface IProductDetailService
     {
-        Task<List<ResultProductDetailDto>> GetAllProductDetailAsync();
-
-        Task CreateProductDetailAsync(CreateProductDetailDto productDetailDto);
-
-        Task UpdateProductDetailAsync(UpdateProductDetailDto productDetailDto);
-
+        Task<List<ResultProductDetailDto>> GettAllProductDetailAsync();
+        Task CreateProductDetailAsync(CreateProductDetailDto createProductDetailDto);
+        Task UpdateProductDetailAsync(UpdateProductDetailDto updateProductDetailDto);
         Task DeleteProductDetailAsync(string id);
-
         Task<GetByIdProductDetailDto> GetByIdProductDetailAsync(string id);
+        Task<GetByIdProductDetailDto> GetByProductIdProductDetailAsync(string id);
     }
 }
